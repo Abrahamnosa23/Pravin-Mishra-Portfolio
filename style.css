@@ -221,10 +221,39 @@ body {
   text-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
+.hero-cta {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: #111;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.hero-cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 32px;
+  }
+
+  .hero-cta {
+    margin-top: 20px;
+    padding: 13px 20px;
   }
 }
 
