@@ -526,12 +526,23 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 - Deployed on 6th September 2026 - By Abraham N. Aigbokhan</p>
+        <p>Pravin Mishra Portfolio v1.0 - Deployed on <span id="deployment-date"></span> - By Abraham N. Aigbokhan</p>
       </div>
 
     </div>
   </footer>
 
+  <script>
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+
+    document.getElementById("year").textContent = today.getFullYear();
+    document.getElementById("deployment-date").textContent = formattedDate;
+  </script>
 
 
 </body>
